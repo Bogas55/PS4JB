@@ -19,6 +19,7 @@ historyblocker.js
 idu.js
 index.html
 jb.js
+jb_new.js
 kernelclock.js
 linuxloader1gb.js
 linuxloader3gb.js
@@ -31,10 +32,11 @@ web-activator.js
 webrte.js
 mira\mira.js
 mira\mira2.js
-webkit-7.50\external\index.html
-webkit-7.50\external\int64.js
-webkit-7.50\external\ps4.js
-webkit-7.50\external\utils.js
+webkit\index.html
+webkit\int64.js
+webkit\ps4.js
+webkit\ps4_mod.js
+webkit\utils.js
 
 NETWORK: 
 * 

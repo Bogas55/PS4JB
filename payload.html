@@ -143,9 +143,9 @@
   function preloadScripts(lst) {
     for(var i = 0; i < lst.length; i++) {
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', lst[i], false);
-      xhr.send('');
-      scriptCode += xhr.responseText + '\n';
+      xhr.open("GET", lst[i], false);
+      xhr.send("");
+      scriptCode += xhr.responseText + "\n";
     }
   }
 
@@ -153,23 +153,27 @@
     var ans = {};
     var p = document.location.hash.substr(1).split("&");
     for(var i = 0; i < p.length; i++) {
-      var kv = p[i].split('=');
+      var kv = p[i].split("=");
       var k = kv.shift();
-      ans[k] = decodeURIComponent(kv.join('='));
+      ans[k] = decodeURIComponent(kv.join("="));
     }
     return ans;
   }
 
   window.midExploit = function() {
     var params = getHashParams();
-    var scripts = ['blob.js', 'jb.js'];
-    if ('p0' in params) {
+    if (localStorage.getItem("jailbreak_kernel_exploit") === null) {
+      var scripts = ["blob.js", "jb.js"];
+    } else {
+      var scripts = ["blob.js", "jb_new.js"];
+    }
+    if ("p0" in params) {
       scripts.push(params.p0);
     }
-    if ('p1' in params) {
+    if ("p1" in params) {
       scripts.push(params.p1);
     }
-    scripts.push('netcat.js');
+    scripts.push("netcat.js");
     if (jailbreak_payload == "web-activator.js") {
       scripts.push("frontend.js");
     }
@@ -186,7 +190,7 @@
     } else {
       debug_log("[+] Running payload \"" + jailbreak_payload + "\" ...");
     }
-    history.pushState({}, '', 'index.html');
+    history.pushState({}, "", "index.html");
     setTimeout(function() {
       eval.call(window, scriptCode);
       done();
@@ -214,9 +218,15 @@
     }
   }
 </script>
-<script src="webkit-7.50/external/utils.js"></script>
-<script src="webkit-7.50/external/int64.js"></script>
-<script src="webkit-7.50/external/ps4.js"></script>
+<script src="webkit/utils.js"></script>
+<script src="webkit/int64.js"></script>
+<script>
+if (localStorage.getItem("jailbreak_webkit_exploit") === null) {
+  document.write("<script src=\"webkit/ps4.js\"><\/script>");
+} else {
+  document.write("<script src=\"webkit/ps4_mod.js\"><\/script>");
+}
+</script>
 <button id="input1" onfocus="handle2()" style="opacity: 0"></button>
 <button id="input2" style="opacity: 0"></button>
 <button id="input3" onfocus="handle2()" style="opacity: 0"></button>
