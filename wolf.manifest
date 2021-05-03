@@ -14,12 +14,18 @@ frontend.js
 ftp.js
 goldhen0755.js
 goldhen1755.js
+gtava1.js
+gtava2.js
+gtava3.js
+gtavl.js
+gtavn1.js
+gtavn2.js
+gtavn3.js
 hen213b.js
 historyblocker.js
 idu.js
 index.html
 jb.js
-jb_new.js
 kernelclock.js
 linuxloader1gb.js
 linuxloader3gb.js
@@ -32,11 +38,9 @@ web-activator.js
 webrte.js
 mira\mira.js
 mira\mira2.js
-webkit\index.html
-webkit\int64.js
-webkit\ps4.js
-webkit\ps4_mod.js
-webkit\utils.js
+webkit-7.50\external\int64.js
+webkit-7.50\external\ps4.js
+webkit-7.50\external\utils.js
 
 NETWORK: 
 * 
