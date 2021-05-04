@@ -9,7 +9,12 @@ blob.js
 disableupdates.js
 dumper.js
 enableupdates.js
-fan.js
+fan50.js
+fan55.js
+fan60.js
+fan65.js
+fan70.js
+fan75.js
 frontend.js
 ftp.js
 goldhen0755.js
